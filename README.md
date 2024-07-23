@@ -6,11 +6,40 @@
 
 1. Definir al menos dos modelos: uno para post, y otro para comentarios (o para usuarios).
 2. Implementa serializadores para los modelos utilizados.
-3. Genera las vistas, opcionalmente utilizando `ViewSets` para manejar las operaciones CRUD de `Post.
-4. Configura las rutas para que la API permita realizar las operaciones CRUD sobre las entradas del blog y los comentarios.
-5. Implementa una funcionalidad que permita listar todos los comentarios de un `Post` específico.
+3. Configura las rutas para que la API permita realizar las operaciones CRUD sobre las entradas del blog y los comentarios, utilizando JSON.
+4. Implementa una funcionalidad que permita listar todos los comentarios de un `Post` específico.
 
 ### Resultado
 
-- Repositorio de código
 - Especificación del API
+- Repositorio de código
+
+## Instrucciones
+
+Crea entorno virtual
+```
+python -m venv .venv
+```
+
+Activarlo antes de correr django
+```
+source .venv/bin/activate
+```
+
+Crea migraciones necesarias
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+Genera un usuario admin con
+```
+python manage.py createsuperuser
+```
+
+Corre el servidor de desarrollo
+```
+python manage.py runserver
+```
+
+El servidor esta disponible en `http://localhost:8000`, el admin en `http://localhost:8000/admin` y el auth en `http://localhost:8000/api-auth/login`
